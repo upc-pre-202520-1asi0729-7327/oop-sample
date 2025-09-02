@@ -63,4 +63,7 @@ public class SalesOrder {
                 .reduce(Money.zero(), Money::add);
     }
 
+    public String getOrderTotalAsString() {
+        return this.totalAmount.toString();
+    }
 }
