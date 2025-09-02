@@ -31,7 +31,7 @@ public record Money(BigDecimal amount, Currency currency) {
      * Returns a Money instance representing zero amount in USD.
      * @return Money instance with zero amount in USD
      */
-    public Money zero() {
+    public static Money zero() {
         return new Money(BigDecimal.ZERO, Currency.getInstance("USD"));
     }
 
