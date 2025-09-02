@@ -1,2 +1,33 @@
 @startuml
+package "shared" {
+    class "Money" {
+        *amount: BigDecimal
+        *currency: Currency
+        --
+        +Money(amount: BigDecimal, currency: Currency)
+        +getAmount(): BigDecimal
+        +getCurrency(): Currency
+        +add(other: Money): Money
+        +multiply(multiplier: int): Money
+        +toString(): String
+        +zero(): Money { static }
+    }
+    class "Address" {
+        *street: String
+        *number: String
+        *city: String
+        *state: String
+        *postalCode: String
+        *country: String
+        --
+        +Address(street: String, city: String, state: String, zipCode: String)
+        +getStreet(): String
+        +getCity(): String
+        +getState(): String
+        +getPostalCode(): String
+        +getCountry(): String
+        +toString(): String
+        +toString(): String
+    }
+}
 @enduml
